@@ -1,6 +1,18 @@
 # Find my nearest place app
 
+### About the project
+
 tests coverage: 100%
+
+![coverage screenshot](https://github.com/Userm4p/find_my_nearest_place_app/blob/master/readme_images/coverage_screenshot.png?raw=true)
+
+lighthouse score: 
+
+![coverage screenshot](https://github.com/Userm4p/find_my_nearest_place_app/blob/master/readme_images/ligthhouse_screenshot.png?raw=true)
+
+home page:
+
+https://app.netlify.com/sites/find-my-nearest-place/overview
 
 ### Description
 
