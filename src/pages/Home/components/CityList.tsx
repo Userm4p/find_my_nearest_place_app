@@ -1,6 +1,6 @@
 import { useContext, useMemo } from "react";
 import { CitiesContext } from "../context/CitiesContext";
-import { CityItem, PageButton } from "./styled";
+import { CitiesToTableEmpty, CityItem, PageButton } from "./styled";
 import { Span } from "../../../components/Span/styled";
 
 export const CityList = () => {
@@ -18,6 +18,10 @@ export const CityList = () => {
     () => page + 1 === pagesNumber,
     [page, pagesNumber],
   );
+
+  const citiesToTableIsEmpty = useMemo(() => citiesToTable.length === 0, [
+    citiesToTable,
+  ]);
 
   return (
     <div className="Home__CityList_container">
@@ -51,6 +55,13 @@ export const CityList = () => {
             {city.name}
           </CityItem>
         ))}
+        {
+          citiesToTableIsEmpty && (
+            <CitiesToTableEmpty data-testid="empty_cities_list">
+              We couldn't find any city with the name you provided. 😢
+            </CitiesToTableEmpty>
+          )
+        }
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ lighthouse score:
 
 home page:
 
-https://app.netlify.com/sites/find-my-nearest-place/overview
+https://find-my-nearest-place.netlify.app/
 
 ### Description
 

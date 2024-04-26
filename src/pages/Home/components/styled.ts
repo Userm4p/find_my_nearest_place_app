@@ -54,3 +54,14 @@ export const NearestCitiesEmpty = styled.div`
     text-align: center;
   }
 `;
+
+export const CitiesToTableEmpty = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  color: ${Colors.Primary100};
+  background-color: ${Colors.Light};
+  text-align: center;
+  height: calc(168px - 16px);
+
+`;

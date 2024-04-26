@@ -6,12 +6,12 @@ exports[`Tests in Home should match snapshot 1`] = `
     class="Home__container"
   >
     <h1
-      class="sc-jTQCzO eTYkMF"
+      class="sc-gLLuof kxAUtz"
     >
       Find My Nearest Place App 🌍
     </h1>
     <input
-      class="sc-gLLuof dBbpFt"
+      class="sc-iBdnpw hGdfuY"
       name="city"
       placeholder="Type a city"
       value=""
@@ -29,22 +29,22 @@ exports[`Tests in Home should match snapshot 1`] = `
             class="Home__CityList_header_pages_container"
           >
             <span
-              class="sc-eDLKkx bbelVP"
+              class="sc-jTQCzO gJpYtT"
             >
               Page
             </span>
             <span
-              class="sc-eDLKkx bbelVP"
+              class="sc-jTQCzO gJpYtT"
             >
               2
             </span>
             <span
-              class="sc-eDLKkx bbelVP"
+              class="sc-jTQCzO gJpYtT"
             >
               of
             </span>
             <span
-              class="sc-eDLKkx bbelVP"
+              class="sc-jTQCzO gJpYtT"
             >
               20
             </span>
@@ -178,7 +178,7 @@ exports[`Tests in Home should match snapshot 1`] = `
           class="Home__NearestCities_header"
         >
           <h2
-            class="sc-iBdnpw fkbXKd"
+            class="sc-fsYfdN jhPtGv"
             style="color: rgb(0, 0, 0);"
           >
             Selected city:

@@ -61,4 +61,13 @@ describe("Tests in CityList", () => {
     getByText("City 0").click();
     expect(handleSelectCity).toHaveBeenCalledWith(mockContext.citiesToTable[0]);
   });
+
+  test("should show empty message", () => {
+    const { getByTestId } = render(
+      <CitiesContext.Provider value={{ ...mockContext, citiesToTable: [] }}>
+        <CityList />
+      </CitiesContext.Provider>,
+    );
+    expect(getByTestId("empty_cities_list")).toBeInTheDocument();
+  });
 });

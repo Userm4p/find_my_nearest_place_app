@@ -12,22 +12,22 @@ exports[`Tests in CityList should match snapshot 1`] = `
         class="Home__CityList_header_pages_container"
       >
         <span
-          class="sc-eDLKkx bbelVP"
+          class="sc-jTQCzO gJpYtT"
         >
           Page
         </span>
         <span
-          class="sc-eDLKkx bbelVP"
+          class="sc-jTQCzO gJpYtT"
         >
           2
         </span>
         <span
-          class="sc-eDLKkx bbelVP"
+          class="sc-jTQCzO gJpYtT"
         >
           of
         </span>
         <span
-          class="sc-eDLKkx bbelVP"
+          class="sc-jTQCzO gJpYtT"
         >
           20
         </span>
