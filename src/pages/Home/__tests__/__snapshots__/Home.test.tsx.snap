@@ -177,8 +177,9 @@ exports[`Tests in Home should match snapshot 1`] = `
         <div
           class="Home__NearestCities_header"
         >
-          <h3
+          <h2
             class="sc-iBdnpw fkbXKd"
+            style="color: rgb(0, 0, 0);"
           >
             Selected city:
              
@@ -187,7 +188,7 @@ exports[`Tests in Home should match snapshot 1`] = `
             >
               None
             </span>
-          </h3>
+          </h2>
         </div>
         <div
           class="sc-hLQSwg klCYwh"

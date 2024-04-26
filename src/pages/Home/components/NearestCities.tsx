@@ -1,7 +1,8 @@
 import { useContext, useMemo } from "react";
 import { CitiesContext } from "../context/CitiesContext";
-import { H3 } from "../../../components/H3/styled";
+import { H2 } from "../../../components/H2/styled";
 import { NearestCitiesEmpty, NearestCityItem, PageButton } from "./styled";
+import { Colors } from "../../../utils/enums/Colors";
 
 export const NearestCities = () => {
   const { nearestCities, selectedCity, clearSelectedCity } =
@@ -15,12 +16,14 @@ export const NearestCities = () => {
   return (
     <div className="Home__NearestCities_container">
       <div className="Home__NearestCities_header">
-        <H3>
+        <H2 style={{
+          color: Colors.Black
+        }}>
           Selected city:{" "}
           <span style={{ fontWeight: "lighter" }}>
             {selectedCity?.name || "None"}
           </span>
-        </H3>
+        </H2>
         {selectedCity && (
           <PageButton data-testid="clear_button" onClick={clearSelectedCity}>
             Clear

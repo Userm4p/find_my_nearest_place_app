@@ -8,8 +8,9 @@ exports[`Tests in NearestCities should match snapshot when nearestCities is empt
     <div
       class="Home__NearestCities_header"
     >
-      <h3
+      <h2
         class="sc-beySPh jhkGMy"
+        style="color: rgb(0, 0, 0);"
       >
         Selected city:
          
@@ -18,7 +19,7 @@ exports[`Tests in NearestCities should match snapshot when nearestCities is empt
         >
           None
         </span>
-      </h3>
+      </h2>
     </div>
     <div
       class="sc-eDLKkx ejAaeS"
@@ -40,8 +41,9 @@ exports[`Tests in NearestCities should match snapshot when nearestCities is not 
     <div
       class="Home__NearestCities_header"
     >
-      <h3
+      <h2
         class="sc-beySPh jhkGMy"
+        style="color: rgb(0, 0, 0);"
       >
         Selected city:
          
@@ -50,7 +52,7 @@ exports[`Tests in NearestCities should match snapshot when nearestCities is not 
         >
           City 0
         </span>
-      </h3>
+      </h2>
       <button
         class="sc-dmyCSP iVBKLK"
         data-testid="clear_button"
