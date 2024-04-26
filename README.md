@@ -19,6 +19,7 @@ This is a simple app that allows users to find the nearest place of a search by 
 1. Clone the repository
 2. Run `npm install` to install the dependencies
 3. Run `npm run dev` to start the app in development mode
+5. Run `npm test:watch` to run the tests in watch mode
 4. Run `npm test` to run the tests
 5. Run `npm run fmt` to format the code
 6. Run `npm run build` to build the app
