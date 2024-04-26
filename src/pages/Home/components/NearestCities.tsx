@@ -16,9 +16,11 @@ export const NearestCities = () => {
   return (
     <div className="Home__NearestCities_container">
       <div className="Home__NearestCities_header">
-        <H2 style={{
-          color: Colors.Black
-        }}>
+        <H2
+          style={{
+            color: Colors.Black,
+          }}
+        >
           Selected city:{" "}
           <span style={{ fontWeight: "lighter" }}>
             {selectedCity?.name || "None"}

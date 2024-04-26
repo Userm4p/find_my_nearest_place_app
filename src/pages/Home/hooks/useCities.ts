@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import dbCities from "../../../db/cities.json";
 import { City } from "../types/cities";
 import { useForm } from "../../../hooks/useForm";
@@ -71,6 +71,10 @@ export const useCities = () => {
   const clearSelectedCity = useCallback(() => {
     setSelectedCity(null);
   }, []);
+
+  useEffect(() => {
+    setPage(0);
+  }, [values.city]);
 
   return {
     cities,

@@ -81,6 +81,30 @@ describe("Tests in useCities", () => {
     await waitFor(() => expect(result.current.cities).toHaveLength(1));
   });
 
+  test("when city changes page should be established in 0", async () => {
+    const { result } = renderHook(() => useCities());
+
+    act(() => {
+      result.current.handleChange({
+        target: { value: "city", name: "city" },
+      } as React.ChangeEvent<HTMLInputElement>);
+    });
+
+    act(() => {
+      result.current.handleNextPage();
+    });
+
+    await waitFor(() => expect(result.current.page).toBe(1));
+
+    act(() => {
+      result.current.handleChange({
+        target: { value: "city 2", name: "city" },
+      } as React.ChangeEvent<HTMLInputElement>);
+    });
+
+    await waitFor(() => expect(result.current.page).toBe(0));
+  });
+
   test("handleSelectCity should set selectedCity and citiesWithDistance should return the nearest cities", async () => {
     const { result } = renderHook(() => useCities());
 

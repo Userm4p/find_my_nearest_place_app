@@ -63,5 +63,4 @@ export const CitiesToTableEmpty = styled.div`
   background-color: ${Colors.Light};
   text-align: center;
   height: calc(168px - 16px);
-
 `;

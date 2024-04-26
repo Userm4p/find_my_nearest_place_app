@@ -19,9 +19,10 @@ export const CityList = () => {
     [page, pagesNumber],
   );
 
-  const citiesToTableIsEmpty = useMemo(() => citiesToTable.length === 0, [
-    citiesToTable,
-  ]);
+  const citiesToTableIsEmpty = useMemo(
+    () => citiesToTable.length === 0,
+    [citiesToTable],
+  );
 
   return (
     <div className="Home__CityList_container">
@@ -55,13 +56,11 @@ export const CityList = () => {
             {city.name}
           </CityItem>
         ))}
-        {
-          citiesToTableIsEmpty && (
-            <CitiesToTableEmpty data-testid="empty_cities_list">
-              We couldn't find any city with the name you provided. 😢
-            </CitiesToTableEmpty>
-          )
-        }
+        {citiesToTableIsEmpty && (
+          <CitiesToTableEmpty data-testid="empty_cities_list">
+            We couldn't find any city with the name you provided. 😢
+          </CitiesToTableEmpty>
+        )}
       </div>
     </div>
   );
