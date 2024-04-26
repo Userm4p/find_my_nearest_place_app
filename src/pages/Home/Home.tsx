@@ -1,13 +1,19 @@
-import { H1 } from "../../components/H1/styledH1"
+import { CityList } from "./components/CityList";
+import { Header } from "./components/Header";
+import { CitiesContext } from "./context/CitiesContext";
+import { useCities } from "./hooks/useCities";
 
 const Home = () => {
-  return (
-    <div className="Home__container">
-        <H1>
-            Find My Nearest Place App 🌍
-        </H1>
-    </div>
-  )
-}
+  const citiesHookInstance = useCities();
 
-export default Home
+  return (
+    <CitiesContext.Provider value={citiesHookInstance}>
+      <div className="Home__container">
+        <Header />
+        <CityList />
+      </div>
+    </CitiesContext.Provider>
+  );
+};
+
+export default Home;

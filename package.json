@@ -11,7 +11,8 @@
     "fmt": "prettier --write \"./**/*.{js,jsx,json,ts,tsx,scss,code-snippets}\"",
     "start": "serve -s dist",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:coverage" : "jest --coverage"
   },
   "dependencies": {
     "jest-environment-jsdom": "^29.7.0",

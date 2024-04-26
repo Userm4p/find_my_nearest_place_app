@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in CityList should match snapshot 1`] = `
+<div>
+  <div
+    class="Home__CityList_container"
+  >
+    <div
+      class="Home__CityList_header"
+    >
+      <div
+        class="Home__CityList_header_pages_container"
+      >
+        <span
+          class="sc-dmyCSP edUgyG"
+        >
+          Page
+        </span>
+        <span
+          class="sc-dmyCSP edUgyG"
+        >
+          2
+        </span>
+        <span
+          class="sc-dmyCSP edUgyG"
+        >
+          of
+        </span>
+        <span
+          class="sc-dmyCSP edUgyG"
+        >
+          20
+        </span>
+      </div>
+      <div
+        class="Home__CityList_header_buttons_container"
+      >
+        <button
+          class="sc-guDLey csPTfk"
+          data-testid="prev_button"
+        >
+          Prev
+        </button>
+        <button
+          class="sc-guDLey csPTfk"
+          data-testid="next_button"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+    <div
+      class="Home__CityList_cities_container"
+    >
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 0
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 1
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 2
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 3
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 4
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 5
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 6
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 7
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 8
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 9
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 10
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 11
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 12
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 13
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 14
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 15
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 16
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 17
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 18
+      </div>
+      <div
+        class="sc-beySPh hWTDYJ"
+      >
+        City 19
+      </div>
+    </div>
+  </div>
+</div>
+`;

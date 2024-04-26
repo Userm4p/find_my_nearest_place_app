@@ -1,31 +1,30 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
-
-interface Props<T>{
-    initialValues: T;
+interface Props<T> {
+  initialValues: T;
 }
 
-export const useForm = <T,>({
-    initialValues
-}:Props<T>) => {
-    
-    const [values, setValues] = useState<T>(initialValues);
+export const useForm = <T,>({ initialValues }: Props<T>) => {
+  const [values, setValues] = useState<T>(initialValues);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setValues({
-            ...values,
-            [name]: value
-        });
-    };
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = e.target;
+      setValues({
+        ...values,
+        [name]: value,
+      });
+    },
+    [values],
+  );
 
-    const reset = () => {
-        setValues(initialValues);
-    };
+  const reset = useCallback(() => {
+    setValues(initialValues);
+  }, [initialValues]);
 
-  return ({
+  return {
     values,
     handleChange,
-    reset
-  })
-}
+    reset,
+  };
+};
