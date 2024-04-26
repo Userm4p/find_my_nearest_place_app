@@ -17,4 +17,8 @@ export const Input = styled.input`
   &::placeholder {
     color: ${Colors.Primary40};
   }
+
+  @media (max-width: 1024px) {
+    width: 320px;
+  }
 `;

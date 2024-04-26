@@ -13,6 +13,10 @@ export interface ICitiesContext {
   handlePrevPage: () => void;
   pagesNumber: number;
   page: number;
+  handleSelectCity: (city: City) => void;
+  nearestCities: City[];
+  selectedCity: City | null;
+  clearSelectedCity: () => void;
 }
 
 export const CitiesContext = createContext<ICitiesContext>({
@@ -27,4 +31,8 @@ export const CitiesContext = createContext<ICitiesContext>({
   handlePrevPage: () => {},
   pagesNumber: 0,
   page: 0,
+  handleSelectCity: () => {},
+  nearestCities: [],
+  selectedCity: null,
+  clearSelectedCity: () => {},
 });

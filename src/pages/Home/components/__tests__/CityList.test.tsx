@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { CityList } from "../CityList";
 import { CitiesContext } from "../../context/CitiesContext";
-import '@testing-library/jest-dom'
+import "@testing-library/jest-dom";
 
 const mockContext = {
   citiesToTable: Array.from({ length: 20 }, (_, i) => ({
@@ -18,6 +18,10 @@ const mockContext = {
   handleChange: () => {},
   reset: () => {},
   cities: [],
+  handleSelectCity: () => {},
+  nearestCities: [],
+  selectedCity: null,
+  clearSelectedCity: () => {},
 };
 
 describe("Tests in CityList", () => {
@@ -29,21 +33,32 @@ describe("Tests in CityList", () => {
     );
     expect(container).toMatchSnapshot();
   });
-    test("prev button should be disabled", () => {
-        const { getByTestId } = render(
-        <CitiesContext.Provider value={{ ...mockContext, page: 0 }}>
-            <CityList />
-        </CitiesContext.Provider>,
-        );
-        expect(getByTestId("prev_button")).toBeDisabled();
-    });
+  test("prev button should be disabled", () => {
+    const { getByTestId } = render(
+      <CitiesContext.Provider value={{ ...mockContext, page: 0 }}>
+        <CityList />
+      </CitiesContext.Provider>,
+    );
+    expect(getByTestId("prev_button")).toBeDisabled();
+  });
 
-    test("next button should be disabled", () => {
-        const { getByTestId } = render(
-        <CitiesContext.Provider value={{ ...mockContext, page: 19 }}>
-            <CityList />
-        </CitiesContext.Provider>,
-        );
-        expect(getByTestId("next_button")).toBeDisabled();
-    });
+  test("next button should be disabled", () => {
+    const { getByTestId } = render(
+      <CitiesContext.Provider value={{ ...mockContext, page: 19 }}>
+        <CityList />
+      </CitiesContext.Provider>,
+    );
+    expect(getByTestId("next_button")).toBeDisabled();
+  });
+
+  test("on click city should call handleSelectCity", () => {
+    const handleSelectCity = jest.fn();
+    const { getByText } = render(
+      <CitiesContext.Provider value={{ ...mockContext, handleSelectCity }}>
+        <CityList />
+      </CitiesContext.Provider>,
+    );
+    getByText("City 0").click();
+    expect(handleSelectCity).toHaveBeenCalledWith(mockContext.citiesToTable[0]);
+  });
 });

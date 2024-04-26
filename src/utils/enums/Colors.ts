@@ -8,5 +8,5 @@ export enum Colors {
   Dark = "#333333",
   White = "#ffffff",
   Black = "#000000",
-  Gray = "#808080",
+  Grey = "#808080",
 }

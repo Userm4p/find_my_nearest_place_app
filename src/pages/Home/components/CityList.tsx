@@ -4,8 +4,14 @@ import { CityItem, PageButton } from "./styled";
 import { Span } from "../../../components/Span/styled";
 
 export const CityList = () => {
-  const { citiesToTable, pagesNumber, page, handleNextPage, handlePrevPage } =
-    useContext(CitiesContext);
+  const {
+    citiesToTable,
+    pagesNumber,
+    page,
+    handleNextPage,
+    handlePrevPage,
+    handleSelectCity,
+  } = useContext(CitiesContext);
 
   const isPrevButtonDisabled = useMemo(() => page === 0, [page]);
   const isNextButtonDisabled = useMemo(
@@ -23,17 +29,27 @@ export const CityList = () => {
           <Span>{pagesNumber}</Span>
         </div>
         <div className="Home__CityList_header_buttons_container">
-          <PageButton data-testid="prev_button" onClick={handlePrevPage} disabled={isPrevButtonDisabled}>
+          <PageButton
+            data-testid="prev_button"
+            onClick={handlePrevPage}
+            disabled={isPrevButtonDisabled}
+          >
             Prev
           </PageButton>
-          <PageButton data-testid="next_button" onClick={handleNextPage} disabled={isNextButtonDisabled}>
+          <PageButton
+            data-testid="next_button"
+            onClick={handleNextPage}
+            disabled={isNextButtonDisabled}
+          >
             Next
           </PageButton>
         </div>
       </div>
       <div className="Home__CityList_cities_container">
         {citiesToTable.map((city, i) => (
-          <CityItem key={i}>{city.name}</CityItem>
+          <CityItem onClick={() => handleSelectCity(city)} key={i}>
+            {city.name}
+          </CityItem>
         ))}
       </div>
     </div>

@@ -27,7 +27,30 @@ export const PageButton = styled.button`
   }
 
   &:disabled {
-    background-color: ${Colors.Gray};
+    background-color: ${Colors.Grey};
     color: ${Colors.Light};
+  }
+`;
+
+export const NearestCityItem = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  color: ${Colors.Light};
+  background-color: ${Colors.Primary100};
+  border-bottom: 1px solid ${Colors.Primary80};
+`;
+
+export const NearestCitiesEmpty = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  color: ${Colors.Light};
+  background-color: ${Colors.Primary100};
+  height: calc(168px - 16px);
+
+  span {
+    text-align: center;
   }
 `;

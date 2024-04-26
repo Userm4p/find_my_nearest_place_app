@@ -1,5 +1,6 @@
 import { act, renderHook, waitFor } from "@testing-library/react";
 import { useCities } from "../useCities";
+import { calculateDistanceBetweenTwoPoints } from "../../utils/calculateDistanceBetweenTwoPoints";
 
 jest.mock("../../../../db/cities.json", () =>
   Array.from({ length: 20 }, (_, i) => ({
@@ -9,6 +10,14 @@ jest.mock("../../../../db/cities.json", () =>
     lng: i,
   })),
 );
+
+const mockNearestCities = Array.from({ length: 5 }, (_, i) => ({
+  name: `City ${i}`,
+  country: `Country ${i}`,
+  lat: i,
+  lng: i,
+  distance: calculateDistanceBetweenTwoPoints(1, 1, i, i),
+}));
 
 describe("Tests in useCities", () => {
   test("citiesToTable should return 10 cities", async () => {
@@ -70,5 +79,65 @@ describe("Tests in useCities", () => {
     });
 
     await waitFor(() => expect(result.current.cities).toHaveLength(1));
+  });
+
+  test("handleSelectCity should set selectedCity and citiesWithDistance should return the nearest cities", async () => {
+    const { result } = renderHook(() => useCities());
+
+    act(() => {
+      result.current.handleSelectCity({
+        name: "City 1",
+        country: "Country 1",
+        lat: "1",
+        lng: "1",
+      });
+    });
+
+    await waitFor(() =>
+      expect(result.current.selectedCity).toEqual({
+        name: "City 1",
+        country: "Country 1",
+        lat: "1",
+        lng: "1",
+      }),
+    );
+
+    const aux = mockNearestCities
+      .sort((a, b) => a.distance - b.distance)
+      .slice(1, 5);
+
+    await waitFor(() =>
+      expect(JSON.stringify(result.current.nearestCities)).toBe(
+        JSON.stringify(aux),
+      ),
+    );
+  });
+
+  test("handleClear should set selectedCity null", async () => {
+    const { result } = renderHook(() => useCities());
+
+    act(() => {
+      result.current.handleSelectCity({
+        name: "City 1",
+        country: "Country 1",
+        lat: "1",
+        lng: "1",
+      });
+    });
+
+    await waitFor(() =>
+      expect(result.current.selectedCity).toEqual({
+        name: "City 1",
+        country: "Country 1",
+        lat: "1",
+        lng: "1",
+      }),
+    );
+
+    act(() => {
+      result.current.clearSelectedCity();
+    });
+
+    await waitFor(() => expect(result.current.selectedCity).toBe(null));
   });
 });

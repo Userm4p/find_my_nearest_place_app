@@ -34,20 +34,47 @@ This is a simple app that allows users to find the nearest place of a search by 
   |- public
   |- src
     |- components
-      |- Select
+      |- GenericComponent
+        |- styled.ts
     |- hooks
-      |- useForm.tsx
+      |- useGenericHook.tsx
     |- pages
-      |- Home
-        |-hooks
-          |- useHome.tsx
+      |- GenericPage
+        |- components
+          |- styled.ts
+          |- SpecificComponent.tsx
+        |- hooks
+          |- useSpecificHook.tsx
         |-context
-          |- HomeContext.tsx
-        |-Home.tsx
+          |- SpecificContext.tsx
+        |-utils
+          |- specificFunction.ts
+          |- specificEnum.ts
+        |- types
+          |- specificType.ts
+        |- GenericPage.tsx
+        |- _GenericPage.scss
     |- db
         |- cities.json
+    |- routes
+      |- AppRouter.ts
     |- App.tsx
     |- main.tsx
     |- react-app-env.d.ts
     |- setupTests.ts
 ```
+
+### About distance calculation
+
+The app uses the haversine formula to calculate the distance between two points on the earth's surface. The haversine formula calculates the distance between two points on the earth's surface given their longitudes and latitudes. The formula is given by:
+
+```
+
+  a = sin²(Δφ/2) + cos φ1 ⋅ cos φ2 ⋅ sin²(Δλ/2)
+  c = 2 ⋅ atan2( √a, √(1−a) )
+  d = R ⋅ c
+
+```
+
+where φ is latitude, λ is longitude, R is earth’s radius (mean radius = 6,371km) and Δ is the difference between two points.
+

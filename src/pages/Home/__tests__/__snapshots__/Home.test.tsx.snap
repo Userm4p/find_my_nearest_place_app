@@ -6,164 +6,196 @@ exports[`Tests in Home should match snapshot 1`] = `
     class="Home__container"
   >
     <h1
-      class="sc-hLQSwg usatO"
+      class="sc-jTQCzO eTYkMF"
     >
       Find My Nearest Place App 🌍
     </h1>
     <input
-      class="sc-eDLKkx bPRxgU"
+      class="sc-gLLuof dBbpFt"
       name="city"
       placeholder="Type a city"
+      value=""
     />
     <div
-      class="Home__CityList_container"
+      class="Home__body_container"
     >
       <div
-        class="Home__CityList_header"
+        class="Home__CityList_container"
       >
         <div
-          class="Home__CityList_header_pages_container"
+          class="Home__CityList_header"
         >
-          <span
-            class="sc-dmyCSP edUgyG"
+          <div
+            class="Home__CityList_header_pages_container"
           >
-            Page
-          </span>
-          <span
-            class="sc-dmyCSP edUgyG"
+            <span
+              class="sc-eDLKkx bbelVP"
+            >
+              Page
+            </span>
+            <span
+              class="sc-eDLKkx bbelVP"
+            >
+              2
+            </span>
+            <span
+              class="sc-eDLKkx bbelVP"
+            >
+              of
+            </span>
+            <span
+              class="sc-eDLKkx bbelVP"
+            >
+              20
+            </span>
+          </div>
+          <div
+            class="Home__CityList_header_buttons_container"
           >
-            2
-          </span>
-          <span
-            class="sc-dmyCSP edUgyG"
-          >
-            of
-          </span>
-          <span
-            class="sc-dmyCSP edUgyG"
-          >
-            20
-          </span>
+            <button
+              class="sc-guDLey csPTfk"
+              data-testid="prev_button"
+            >
+              Prev
+            </button>
+            <button
+              class="sc-guDLey csPTfk"
+              data-testid="next_button"
+            >
+              Next
+            </button>
+          </div>
         </div>
         <div
-          class="Home__CityList_header_buttons_container"
+          class="Home__CityList_cities_container"
         >
-          <button
-            class="sc-guDLey csPTfk"
-            data-testid="prev_button"
+          <div
+            class="sc-beySPh hWTDYJ"
           >
-            Prev
-          </button>
-          <button
-            class="sc-guDLey csPTfk"
-            data-testid="next_button"
+            City 0
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
           >
-            Next
-          </button>
+            City 1
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 2
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 3
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 4
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 5
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 6
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 7
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 8
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 9
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 10
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 11
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 12
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 13
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 14
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 15
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 16
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 17
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 18
+          </div>
+          <div
+            class="sc-beySPh hWTDYJ"
+          >
+            City 19
+          </div>
         </div>
       </div>
       <div
-        class="Home__CityList_cities_container"
+        class="Home__NearestCities_container"
       >
         <div
-          class="sc-beySPh hWTDYJ"
+          class="Home__NearestCities_header"
         >
-          City 0
+          <h3
+            class="sc-iBdnpw fkbXKd"
+          >
+            Selected city:
+             
+            <span
+              style="font-weight: lighter;"
+            >
+              None
+            </span>
+          </h3>
         </div>
         <div
-          class="sc-beySPh hWTDYJ"
+          class="sc-hLQSwg klCYwh"
+          data-testid="empty_message"
         >
-          City 1
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 2
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 3
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 4
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 5
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 6
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 7
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 8
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 9
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 10
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 11
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 12
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 13
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 14
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 15
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 16
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 17
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 18
-        </div>
-        <div
-          class="sc-beySPh hWTDYJ"
-        >
-          City 19
+          <span>
+            You must select a city to find the nearest cities. 😉
+          </span>
         </div>
       </div>
     </div>

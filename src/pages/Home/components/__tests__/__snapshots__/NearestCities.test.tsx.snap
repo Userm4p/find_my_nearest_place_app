@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in NearestCities should match snapshot when nearestCities is empty 1`] = `
+<div>
+  <div
+    class="Home__NearestCities_container"
+  >
+    <div
+      class="Home__NearestCities_header"
+    >
+      <h3
+        class="sc-beySPh jhkGMy"
+      >
+        Selected city:
+         
+        <span
+          style="font-weight: lighter;"
+        >
+          None
+        </span>
+      </h3>
+    </div>
+    <div
+      class="sc-eDLKkx ejAaeS"
+      data-testid="empty_message"
+    >
+      <span>
+        You must select a city to find the nearest cities. 😉
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tests in NearestCities should match snapshot when nearestCities is not empty 1`] = `
+<div>
+  <div
+    class="Home__NearestCities_container"
+  >
+    <div
+      class="Home__NearestCities_header"
+    >
+      <h3
+        class="sc-beySPh jhkGMy"
+      >
+        Selected city:
+         
+        <span
+          style="font-weight: lighter;"
+        >
+          City 0
+        </span>
+      </h3>
+      <button
+        class="sc-dmyCSP iVBKLK"
+        data-testid="clear_button"
+      >
+        Clear
+      </button>
+    </div>
+    <div
+      class="Home__NearestCities_cities_container"
+      data-testid="nearest_citites"
+    >
+      <div
+        class="sc-hLQSwg iBHetu"
+      >
+        <span
+          style="font-weight: bold; margin-right: 8px;"
+        >
+          1
+          .
+        </span>
+        City 0
+      </div>
+      <div
+        class="sc-hLQSwg iBHetu"
+      >
+        <span
+          style="font-weight: bold; margin-right: 8px;"
+        >
+          2
+          .
+        </span>
+        City 1
+      </div>
+      <div
+        class="sc-hLQSwg iBHetu"
+      >
+        <span
+          style="font-weight: bold; margin-right: 8px;"
+        >
+          3
+          .
+        </span>
+        City 2
+      </div>
+      <div
+        class="sc-hLQSwg iBHetu"
+      >
+        <span
+          style="font-weight: bold; margin-right: 8px;"
+        >
+          4
+          .
+        </span>
+        City 3
+      </div>
+      <div
+        class="sc-hLQSwg iBHetu"
+      >
+        <span
+          style="font-weight: bold; margin-right: 8px;"
+        >
+          5
+          .
+        </span>
+        City 4
+      </div>
+    </div>
+  </div>
+</div>
+`;

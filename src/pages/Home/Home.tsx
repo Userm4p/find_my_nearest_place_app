@@ -1,5 +1,6 @@
 import { CityList } from "./components/CityList";
 import { Header } from "./components/Header";
+import { NearestCities } from "./components/NearestCities";
 import { CitiesContext } from "./context/CitiesContext";
 import { useCities } from "./hooks/useCities";
 
@@ -10,7 +11,10 @@ const Home = () => {
     <CitiesContext.Provider value={citiesHookInstance}>
       <div className="Home__container">
         <Header />
-        <CityList />
+        <div className="Home__body_container">
+          <CityList />
+          <NearestCities />
+        </div>
       </div>
     </CitiesContext.Provider>
   );

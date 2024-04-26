@@ -23,7 +23,7 @@ describe("Tests in useForm", () => {
     expect(values).toEqual({ name: "Juan", email: "" });
   });
 
-  test('reset should reset values to initialValues', async () => {
+  test("reset should reset values to initialValues", async () => {
     const { result } = renderHook(() =>
       useForm({
         initialValues: { name: "", email: "" },
